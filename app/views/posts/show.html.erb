@@ -1,6 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @post %>
+<div data-controller="vimeo">
+  <div style="padding:56.25% 0 0 0;position:relative;">
+    <iframe data-vimeo-target="player" src="https://player.vimeo.com/video/<%= @post.vimeo_id %>&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Moneygun - Multitenancy &amp; Teams boilerplate | SupeRails #208"></iframe>
+  </div>
+  <button data-action="vimeo#play">Play</button>
+  <button data-action="vimeo#setCurrentTime" data-time="30">00:30</button>
+  <button data-action="vimeo#setCurrentTime" data-time="130">02:10</button>
+  <%= render @post %>
+</div>
+
 
 <div>
   <%= link_to "Edit this post", edit_post_path(@post) %> |

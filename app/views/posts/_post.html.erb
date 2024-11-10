@@ -6,7 +6,7 @@
 
   <p>
     <strong>Description:</strong>
-    <%= post.description %>
+    <%= timestamps_to_buttons(simple_format(post.description)).html_safe %>
   </p>
 
 </div>
